@@ -2,7 +2,7 @@
 * Name: Sopi Sanikidze
 * [Trello Board](https://trello.com/invite/b/66e9f2ccecd04aa658e1d2fc/ATTI59ee15f9c1f8e08431024fc420ea79c0F2C23E0D/game-design-task-list)
 * [Proposal.pdf](https://github.com/user-attachments/files/17299422/Game.Mechanics.1.pdf)
-)
+
 * [Other docs](todo)
 
 ### 2024-09-30 - 2hr: Animation part 3
