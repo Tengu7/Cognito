@@ -28,6 +28,7 @@ func draw_card():
 	$CardAnimationPlayer.play("CardDraw") #ANIMATION GOOD, DO NOT CHANGE
 	
 	await $CardAnimationPlayer.animation_finished
+	$CardPlaceSound.play()
 	flip_card_face()
 
 	# Display the drawn card
@@ -139,6 +140,3 @@ func flip_card_face():
 			print("Error: Failed to load card face image at path: " + card_image_path)
 
 			
-func _on_AnimationFinished(anim_name):
-	if anim_name == "CardDraw":
-		$CardAnimationPlayer.play("CardFlip")

@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5qe5dodc03ci"]
+[gd_scene load_steps=10 format=3 uid="uid://b5qe5dodc03ci"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_e0u2x"]
-[ext_resource type="Texture2D" uid="uid://bup65ag3sr3xy" path="res://assets/CardBack.png" id="2_ij5oj"]
+[ext_resource type="Texture2D" uid="uid://bup65ag3sr3xy" path="res://assets/CardStuffs/CardBack.png" id="2_ij5oj"]
 [ext_resource type="Texture2D" uid="uid://qbqyrmu31eac" path="res://assets/Background.png" id="2_nbbla"]
+[ext_resource type="AudioStream" uid="uid://dtofi5sp3ivlq" path="res://assets/audio/cardFlip3.mp3" id="4_pkeya"]
+[ext_resource type="AudioStream" uid="uid://b50a4qp5qcrob" path="res://assets/audio/cardPlaceSound.mp3" id="5_bjm0s"]
 
 [sub_resource type="Animation" id="Animation_jxwk0"]
 resource_name = "CardDraw"
@@ -18,6 +20,21 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(0, 0), Vector2(288, 0)]
 }
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CardAnimationPlayer/CardDrawSound")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_pkeya")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_3wwir"]
 resource_name = "CardFlip"
@@ -32,20 +49,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(0, 1), Vector2(1, 1)]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"flip_card_face"
-}]
 }
 
 [sub_resource type="Animation" id="Animation_hgsie"]
@@ -147,5 +150,10 @@ offset_bottom = 240.0
 libraries = {
 "": SubResource("AnimationLibrary_ugusy")
 }
+
+[node name="CardDrawSound" type="AudioStreamPlayer" parent="CardAnimationPlayer"]
+
+[node name="CardPlaceSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_bjm0s")
 
 [connection signal="pressed" from="DrawCardButton" to="." method="_on_draw_card_button_pressed"]

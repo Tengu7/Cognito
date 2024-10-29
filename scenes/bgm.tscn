@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://2ct5paxmjs6s"]
+
+[ext_resource type="AudioStream" uid="uid://brclja0ioypns" path="res://assets/audio/terror-heights-dark-ambience-230667.mp3" id="1_3jufq"]
+
+[node name="BGM" type="AudioStreamPlayer"]
+stream = ExtResource("1_3jufq")
+autoplay = true

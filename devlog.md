@@ -4,11 +4,15 @@
 * [Proposal](Game Mechanics.docx)
 * [Other docs](todo)
 
-### 2024-10-10 2hr
+### 2024-10-29 - 3hr
+* Item 1 - Attempted to fix CardFlip animation. Failed. Whatever I have now is now a feature
+* Item 2 - Added music and sound effects
+
+### 2024-10-10 - 2hr: Housekeeping and animations
 * Item 1 - The animation is so close to working I'm losing my mind. Why.
 * Item 2 - Started to edit some of the stories/questions
 
-### 2024-10-8 1hr
+### 2024-10-8 - 1hr: Housekeeping and animations
 * Item 1 - Made some spelling and grammar corrections.
 * Item 2 - Half-hearted attempt at working on the card flip animation. I feel like I'm in an abusive relationship with this thing.
 
